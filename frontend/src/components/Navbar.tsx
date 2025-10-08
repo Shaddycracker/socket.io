@@ -15,13 +15,13 @@ const Navbar = () => {
     return (
         <nav style={{ padding: '1rem', backgroundColor: '#f0f0f0', display: 'flex', justifyContent: 'space-around' }}>
             <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'flex', gap: '1rem' }}>
-                <li ><Link style={{ margin: 0, color: '#333' }} to="/dashboard">Home</Link></li>
-                <li ><Link style={{ margin: 0, color: '#333' }} to="/about">About</Link></li>
-                <li ></li>
-                <li ></li>
                 {
                     user ? (
-                        <>
+                        <> <li ><Link style={{ margin: 0, color: '#333' }} to="/dashboard">Home</Link></li>
+                            <li ><Link style={{ margin: 0, color: '#333' }} to="/about">About</Link></li>
+                            <li ></li>
+                            <li ></li>
+
                             <li>user:Incognito</li>
                             <li ><button style={{ margin: 0, color: '#333' }} onClick={() => { localStorage.clear(); setUser(null); navigate('/') }}>Logout</button></li>
                         </>
